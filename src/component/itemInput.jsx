@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { DataContext } from "../dataContext";
 
 export default function Iteminput() {
-    
+
     const { expenses, setExpenses, incomes, setIncomes } = useContext(DataContext);
 
     const SubmitHandler = (event) => {
@@ -21,7 +21,7 @@ export default function Iteminput() {
 
     return (
         <div>
-            <form onSubmit={SubmitHandler()}>
+            <form onSubmit={SubmitHandler}>
                 <h3>日付</h3>
                 <input type="date" />
                 <h3>内容</h3>

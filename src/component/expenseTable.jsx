@@ -9,11 +9,7 @@ export default function ExpenseTable() {
             <h3>支出一覧</h3>
             <ul>
                 {expenses.map((item, index) => (
-                    <li key={index}>
-                        <span>{item.date}</span>
-                        <span>{item.description}</span>
-                        <span>{item.amount}</span>
-                    </li>
+                    <li key={index}>{item.date} - {item.description} - {item.amount}</li>
                 ))}
             </ul>
             
