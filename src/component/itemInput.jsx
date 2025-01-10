@@ -3,7 +3,7 @@ import { DataContext } from "../dataContext";
 
 export default function Iteminput() {
 
-    const { expenses, setExpenses, incomes, setIncomes } = useContext(DataContext);
+    const { balance, setBalance, expense, setExpense, income, setIncome, expenses, setExpenses, incomes, setIncomes } = useContext(DataContext);
 
     const SubmitHandler = (event) => {
         event.preventDefault();
@@ -12,11 +12,16 @@ export default function Iteminput() {
         const amount = event.target[2].value;
         const data = { date, description, amount };
 
+        // amountが0以下の場合はexpensesに追加、それ以外はincomesに追加
         if (amount <= 0) {
             setExpenses([...expenses, data]);
+            setExpense(expense + Number(amount));
         } else {
             setIncomes([...incomes, data]);
-        }
+            setIncome(income + Number(amount));
+        };
+
+        setBalance(balance + Number(amount));
     };
 
     return (

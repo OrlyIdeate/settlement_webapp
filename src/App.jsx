@@ -13,10 +13,10 @@ export default function App() {
   return (
     <>
         <h1>家計簿</h1>
-        <Balance value="1000" />
-        <Expense value="500" />
-        <Income value="1500" />
         <DataProvider>
+          <Balance />
+          <Expense />
+          <Income />
           <Iteminput />
           <ExpenseTable />
           <IncomeTable />
