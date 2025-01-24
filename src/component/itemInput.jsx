@@ -26,14 +26,14 @@ export default function Iteminput() {
 
     return (
         <div>
-            <form onSubmit={SubmitHandler}>
+            <form onSubmit={SubmitHandler} className="row">
                 <h3>日付</h3>
                 <input type="date" />
                 <h3>内容</h3>
                 <input type="text" />
                 <h3>金額</h3>
                 <input type="number" />
-                <button type="submit">追加</button> 
+                <button className="add" type="submit">追加</button> 
             </form>
         </div>
     );

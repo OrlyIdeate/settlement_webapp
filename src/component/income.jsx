@@ -5,8 +5,8 @@ export default function Income() {
     const { income } = useContext(DataContext);
 
     return (
-        <div>
-            <h2>収入: { income } 円</h2>
+        <div className="col">
+            <h2 className="income">収入: +{ income } 円</h2>
         </div>
     )
 }

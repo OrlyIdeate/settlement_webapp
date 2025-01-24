@@ -11,16 +11,20 @@ export default function App() {
 
 
   return (
-    <>
+    <div className="container">
         <h1>家計簿</h1>
         <DataProvider>
           <Balance />
-          <Expense />
-          <Income />
+          <div className="row">
+            <Expense />
+            <Income />            
+          </div>
           <Iteminput />
-          <ExpenseTable />
-          <IncomeTable />
+          <div className="row">
+            <ExpenseTable />
+            <IncomeTable />            
+          </div>
         </DataProvider>
-    </>
+    </div>
   );
 }
